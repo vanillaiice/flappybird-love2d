@@ -20,7 +20,7 @@ $ make
 
 `Enter` - Pause
 
-`Clear/Delete` - Restart
+`Backspace` - Restart
 
 ## Author
 
