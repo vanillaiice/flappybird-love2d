@@ -22,6 +22,8 @@ $ make
 
 `Backspace` - Restart
 
+`Esc` - Quit
+
 ## Author
 
 Vanillaiice
