@@ -3,7 +3,6 @@
 local world = require('world')
 local state = require('state')
 local colors = require('colors')
-local sound = require('sound')
 
 getHeights = function(height, spacing)
   local h = love.math.random(0, height - spacing)
@@ -31,7 +30,6 @@ return function(pos_x, pos_y, height, spacing)
       self.body:setLinearVelocity(-100, 0)
     end
     e.begin_contact = function(self)
-    sound.effect_collision()
       state.game_over = true
     end
   end

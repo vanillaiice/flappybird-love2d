@@ -9,9 +9,13 @@ return function()
 	
 	local entity = {}
 
+	local sound_played = false
 	entity.draw = function(self)
 		if state.paused and not state.game_over then
-			sound.effect_pause()
+			if not sound_played then
+				sound.effect_pause()
+				sound_played = true
+			end
       love.graphics.setColor(colors['green-dark'])
 			love.graphics.print(
 				'PAUSED',
@@ -21,6 +25,8 @@ return function()
 				2,
 				2
 			)
+		else
+			sound_played = false
 		end
 	end
 

@@ -9,9 +9,13 @@ return function()
 
   local entity = {}
 
+  local sound_played = false
   entity.draw = function()
     if state.game_over then
-      sound.effect_game_over()
+      if not sound_played then
+        sound.effect_game_over()
+        sound_played = true
+      end
       love.graphics.setColor(colors['red'])
       love.graphics.print(
         'GAME OVER',
