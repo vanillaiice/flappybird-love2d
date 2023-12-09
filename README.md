@@ -17,7 +17,9 @@ $ make
 ## Game Controls
 
 `Space` - Jump
+
 `Enter` - Pause
+
 `Clear/Delete` - Restart
 
 ## Author
